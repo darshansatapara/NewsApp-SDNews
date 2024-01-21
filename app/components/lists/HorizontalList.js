@@ -1,22 +1,36 @@
-import { Text, View,FlatList } from "react-native";
-import React, { Component } from "react";
-import Title from "../common/Title";
+import React from 'react';
+import { View, StyleSheet, FlatList } from 'react-native';
+import Title from '../common/Title';
+import SmallCard from '../common/SmallCard';
 
-const HorizontalList = ({ title, data }) => {
+
+const HorizotalList = ({ title, data }) => {
+ 
   return (
     <>
       <Title size={20}>{title}</Title>
-      <View style={}>
-       <FlatList 
-       
-       
-       />
-
-        
+      <View style={styles.listStyle}>
+        <FlatList
+          data={data}
+          keyExtractor={item => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <SmallCard
+              // onPress={() => navigation.push('NewsDetail', { item })}
+              item={item}
+            />
+          )}
+        />
       </View>
     </>
   );
 };
 
-const styles = StyleSheet.create({});
-export default HorizontalList;
+const styles = StyleSheet.create({
+  listStyle: {
+    marginVertical: 15,
+  },
+});
+
+export default HorizotalList;

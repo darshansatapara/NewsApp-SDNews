@@ -2,10 +2,10 @@ import { Text, View, StyleSheet, Image, Dimensions } from "react-native";
 import React from "react";
 import BlockCard from "../cards/BlockCard";
 const { width } = Dimensions.get("window");
-const SmallCard = () => {
+const SmallCard = ({item}) => {
   return (
     <View style={styles.container}>
-      <BlockCard imageStyle={styles.image} />
+      <BlockCard item={item} imageStyle={styles.image} />
     </View>
   );
 };

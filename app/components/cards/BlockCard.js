@@ -3,21 +3,16 @@ import React from "react";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
 
-const BlockCard = ({ style, imageStyle }) => {
+const BlockCard = ({ style, imageStyle, item }) => {
+  const { thumbnail, title, desc } = item;
   return (
     <>
       <View style={styles.container}>
-        <Image
-          source={require("../../../assets/icon.png")}
-          style={[styles.image, imageStyle]}
-        />
+        <Image source={{ uri: thumbnail }} style={[styles.image, imageStyle]} />
 
         <View style={styles.contentContainer}>
-          <Title>Lorem, ipsum.</Title>
-          <SubTitle>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio natus
-            officia quos vitae, nesciunt iste?
-          </SubTitle>
+          <Title>{title}</Title>
+          <SubTitle>{desc}</SubTitle>
         </View>
       </View>
     </>

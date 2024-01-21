@@ -4,6 +4,7 @@ import SearchBar from "./app/components/common/SearchBar";
 import Screen from "./app/components/common/Screen";
 import FeaturedNews from "./app/components/screens/FeaturedNews";
 import SmallCard from "./app/components/common/SmallCard";
+import HorizontalList from "./app/components/lists/HorizontalList";
 
 export default function App() {
   return (
@@ -12,7 +13,6 @@ export default function App() {
       <Screen>
         <SearchBar />
         <FeaturedNews/>
-        <SmallCard/>
       </Screen>
     </>
   );
