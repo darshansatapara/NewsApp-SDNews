@@ -4,7 +4,7 @@ export default [
       title: 'This is the title no one.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
     },
     {
@@ -12,7 +12,7 @@ export default [
       title: 'This is the title no two.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
     },
     {
@@ -20,7 +20,7 @@ export default [
       title: 'This is the title no three.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
     },
     {
@@ -28,7 +28,7 @@ export default [
       title: 'This is the title no four.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
     },
     {
@@ -36,7 +36,7 @@ export default [
       title: 'This is the title no five.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
     },
     {
@@ -44,7 +44,7 @@ export default [
       title: 'This is the title no six.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'tech',
     },
     {
@@ -52,7 +52,7 @@ export default [
       title: 'This is the title no seven.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'tech',
     },
     {
@@ -60,7 +60,7 @@ export default [
       title: 'This is the title no eight.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'tech',
     },
     {
@@ -68,7 +68,7 @@ export default [
       title: 'This is the title no nine.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
       category: 'tech',
     },
@@ -77,7 +77,7 @@ export default [
       title: 'This is the title no ten.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'tech',
     },
     {
@@ -85,7 +85,7 @@ export default [
       title: 'This is the title no eleven.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'political',
     },
     {
@@ -93,7 +93,7 @@ export default [
       title: 'This is the title no twelve.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'political',
     },
     {
@@ -101,7 +101,7 @@ export default [
       title: 'This is the title no thirteen.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'political',
     },
     {
@@ -109,7 +109,7 @@ export default [
       title: 'This is the title no fourteen.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
       category: 'political',
     },
@@ -118,7 +118,7 @@ export default [
       title: 'This is the title no fifteen.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'political',
     },
     {
@@ -126,7 +126,7 @@ export default [
       title: 'This is the title no sixteen.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'entertainment',
     },
     {
@@ -134,7 +134,7 @@ export default [
       title: 'This is the title no seventeen.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'entertainment',
     },
     {
@@ -142,7 +142,7 @@ export default [
       title: 'This is the title no eighteen.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'entertainment',
     },
     {
@@ -150,7 +150,7 @@ export default [
       title: 'This is the title no nineteen.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'breaking-news',
       category: 'entertainment',
     },
@@ -159,7 +159,7 @@ export default [
       title: 'This is the title no twenty.',
       desc:
         'Desc is the short form of description and this format is the actual same as our real database.',
-      thumbnail: 'http://lorempixel.com/400/200/',
+      thumbnail: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6C?ver=dddf',
       category: 'entertainment',
     },
   ];
