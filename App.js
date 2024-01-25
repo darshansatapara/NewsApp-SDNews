@@ -3,8 +3,6 @@ import SearchBar from "./app/components/common/SearchBar";
 import Screen from "./app/components/common/Screen";
 import FeaturedNews from "./app/components/screens/FeaturedNews";
 import BreakingNews from "./app/components/screens/BreakingNews";
-
-import data from "./FakeData";
 import TechNews from "./app/components/screens/TechNews";
 import PoliticalNews from "./app/components/screens/PoliticalNews";
 import EntertainmentNews from "./app/components/screens/EntertainmentNews";
