@@ -1,34 +1,58 @@
-import client from "./client";
+import apiClient from './client';
 
 const getAll = async () => {
   try {
-    const response = await client.get("/news");
+    const response = await apiClient.get('/news');
+  
     if (response.data.success) {
       return response.data.news;
     }
   } catch (error) {
+    console.log('Error while getting all news.', error.message);
     return [];
   }
-  console.log("Error when geting all news");
 };
-const getByCategory = async (category, qty) => {
-  const endpoint = qty ? `news/${category}/${qty}` : `news/${category}`;
+
+const getSingle = async id => {
   try {
-    const response = await client.get(endpoint);
+    const response = await apiClient.get(`/news/single/${id}`);
 
     if (response.data.success) {
       return response.data.news;
     }
   } catch (error) {
-    res.json({
-      success: false,
-      message: "Something went wrong, server error!",
-    });
-    console.log("Error while getting news by category!", error.message);
+    console.log('error while getting single news', error);
   }
 };
 
-export default{
-    getAll,
-    getByCategory
-}
+const getByCategory = async (category, qty) => {
+  const endpoint = qty ? `/news/${category}/${qty}` : `/news/${category}`;
+
+  try {
+    const response = await apiClient.get(endpoint);
+
+    if (response.data.success) {
+      return response.data.news;
+    }
+  } catch (error) {
+    console.log('Error while getting categories news.', error.message);
+    return [];
+  }
+};
+
+const searchPost = async query => {
+  if (!query) return {};
+  try {
+    const response = await apiClient.post(`/news/search/${query}`);
+    return response.data;
+  } catch (error) {
+    console.log('Error while searching - searchPost newsAPi', error);
+  }
+};
+
+export default {
+  getAll,
+  getByCategory,
+  getSingle,
+  searchPost,
+};

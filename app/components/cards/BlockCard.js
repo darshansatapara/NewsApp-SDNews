@@ -3,8 +3,9 @@ import React from "react";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
 
-const BlockCard = ({ style, imageStyle, item }) => {
-  const { thumbnail, title, desc } = item;
+const BlockCard = ({ imageStyle, item }) => {
+  const {thumbnail, title, desc } = item;
+  
   return (
     <>
       <View style={styles.container}>

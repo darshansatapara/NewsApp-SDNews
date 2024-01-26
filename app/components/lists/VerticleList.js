@@ -8,9 +8,7 @@ const VerticleList = ({ title, data }) => {
     <View>
       {title && <Title>{title} </Title>}
       <View style={styles.container}>
-        {data.map((item) => (
-          <VerticleCard item={item} key={item.id} />
-        ))}
+        {data && data.map((item) => <VerticleCard item={item} key={item.id} />)}
       </View>
     </View>
   );
