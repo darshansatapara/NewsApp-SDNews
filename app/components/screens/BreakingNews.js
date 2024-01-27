@@ -1,9 +1,13 @@
-import { View, Text } from "react-native";
-import React from "react";
-import HorizotalList from "../lists/HorizontalList";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import HorizotalList from '../lists/HorizontalList';
 
 const BreakingNews = ({ data }) => {
-  return <HorizotalList title={"Breaking News"} data={data} />;
+  return <HorizotalList title='Breaking News' data={data} />;
 };
+
+const styles = StyleSheet.create({
+  container: {},
+});
 
 export default BreakingNews;

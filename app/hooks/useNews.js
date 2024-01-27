@@ -1,51 +1,57 @@
-import { useEffect, useState } from "react";
-import newsApi from "../api/newApi";
+import { useState, useEffect } from 'react';
+import newsApi from '../api/newApi';
 
-export default useNews = () => {
+const useNews = () => {
   const [featuredNews, setFeaturedNews] = useState({});
   const [breakingNews, setBreakingNews] = useState([]);
   const [politicalNews, setPoliticalNews] = useState([]);
   const [techNews, setTechNews] = useState([]);
   const [entertainmentNews, setEntertainmentNews] = useState([]);
-  const qyt = 5;
-  const filterFeatured = (data) => {
-    const filterdata = data
-      .filter((item) => item.featured === "on")
-      .reverse()[0];
+  const qty = 5;
+  const [loading, setLoading] = useState(false);
 
-    return filterdata;
+  const filterFeatured = data => {
+    return data.filter(item => item.featured === 'on').reverse()[0];
   };
 
   const filterByCategory = (data, category) => {
     const result = data
-      .filter((item) => item.category === category)
+      .filter(item => item.category === category)
       .reverse()
-      .splice(0, qyt);
+      .splice(0, qty);
 
     if (result.length) {
-      result.push({ type: "viewMore", category: category, id: category });
+      result.push({ type: 'viewMore', category: category, id: category });
     }
 
     return result;
   };
 
   const filterMultipleNews = async () => {
+    setLoading(true);
     const allNews = await newsApi.getAll();
+
     setFeaturedNews(filterFeatured(allNews));
-    setBreakingNews(filterByCategory(allNews, "breaking-news"));
-    setPoliticalNews(filterByCategory(allNews, "political"));
-    setEntertainmentNews(filterByCategory(allNews, "entertainment"));
-    setTechNews(filterByCategory(allNews, "tech"));
+
+    setBreakingNews(filterByCategory(allNews, 'breaking-news'));
+    setPoliticalNews(filterByCategory(allNews, 'political'));
+    setEntertainmentNews(filterByCategory(allNews, 'entertainment'));
+    setTechNews(filterByCategory(allNews, 'tech'));
+    setLoading(false);
   };
 
   useEffect(() => {
     filterMultipleNews();
   }, []);
+
   return [
     featuredNews,
     politicalNews,
     entertainmentNews,
     techNews,
     breakingNews,
+    loading,
   ];
 };
+
+export default useNews;

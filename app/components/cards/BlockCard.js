@@ -1,22 +1,25 @@
-import { Text, View, Image, StyleSheet } from "react-native";
 import React from "react";
+import {
+  View,
+  StyleSheet,
+  Image,
+  TouchableWithoutFeedback,
+} from "react-native";
 import Title from "../common/Title";
-import SubTitle from "../common/SubTitle";
+import Subtitle from "../common/SubTitle";
 
-const BlockCard = ({ imageStyle, item }) => {
-  const {thumbnail, title, desc } = item;
-  
+const BlockCard = ({ style, imageStyle, item, onPress }) => {
+  const { thumbnail, title, desc } = item;
   return (
-    <>
-      <View style={styles.container}>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={[styles.container, style]}>
         <Image source={{ uri: thumbnail }} style={[styles.image, imageStyle]} />
-
         <View style={styles.contentContainer}>
           <Title>{title}</Title>
-          <SubTitle>{desc}</SubTitle>
+          <Subtitle>{desc}</Subtitle>
         </View>
       </View>
-    </>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -27,7 +30,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: "hidden",
     backgroundColor: "#fff",
-    marginTop: 10,
   },
   image: {
     width: "100%",
@@ -37,4 +39,5 @@ const styles = StyleSheet.create({
     padding: 5,
   },
 });
+
 export default BlockCard;
