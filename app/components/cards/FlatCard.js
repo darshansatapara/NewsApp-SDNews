@@ -9,14 +9,14 @@ import Title from '../common/Title';
 import Subtitle from '../common/SubTitle';
 
 const FlatCard = ({ item, onPress }) => {
-  const { thumbnail, title, desc } = item;
+  // const { thumbnail, title, desc } = item;
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
-        <Image source={{ uri: thumbnail }} style={styles.image} />
+        <Image source={{ uri: item?.thumbnail }} style={styles.image} />
         <View style={styles.contentContainer}>
-          <Title>{title}</Title>
-          <Subtitle>{desc}</Subtitle>
+          <Title>{item?.title}</Title>
+          <Subtitle>{item?.desc}</Subtitle>
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden',
     marginBottom: 10,
-    height: 80,
+    height: 100,
   },
   image: {
     flex: 0.35,

@@ -41,10 +41,11 @@ const getByCategory = async (category, qty) => {
 };
 
 const searchPost = async (query) => {
+  // console.log("Searching")
   if (!query) return {};
   try {
     const response = await apiClient.post(`/news/search/${query}`);
-    return response.data;
+    return response;
   } catch (error) {
     console.log("Error while searching - searchPost newsAPi", error);
   }

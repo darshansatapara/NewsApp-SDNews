@@ -9,11 +9,11 @@ import Title from "../common/Title";
 import Subtitle from "../common/SubTitle";
 
 const BlockCard = ({ style, imageStyle, item, onPress }) => {
-  const { thumbnail, title, desc } = item;
+  const {  title, desc } = item; // item.title
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={[styles.container, style]}>
-        <Image source={{ uri: thumbnail }} style={[styles.image, imageStyle]} />
+        <Image source={{ uri: item?.thumbnail }} style={[styles.image, imageStyle]} />
         <View style={styles.contentContainer}>
           <Title>{title}</Title>
           <Subtitle>{desc}</Subtitle>

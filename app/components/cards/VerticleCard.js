@@ -1,15 +1,38 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Dimensions } from "react-native";
 import FlatCard from "./FlatCard";
 import ViewMore from "./ViewMore";
-const VerticleCard = ({ item }) => {
+import { useNavigation } from "@react-navigation/native";
+import newApi from "../../api/newApi";
 
-  if (item.type==='viewMore') {
-    return <ViewMore/>
+const VerticleCard = ({ item }) => {
+  const navigation = useNavigation();
+  const handleViewMore = async (category) => {
+    const result = await newApi.getByCategory(category);
+    navigation.navigate("NewsList", result);
+  };
+
+  if (item.type === "viewMore") {
+    return (
+      <ViewMore
+        onPress={() => handleViewMore(item.category)}
+        style={styles.viewMore}
+      />
+    );
   }
-  return <FlatCard item={item} />;
+  return (
+    <FlatCard
+      item={item}
+      onPress={() => navigation.navigate("NewsDetails", { item })}
+    />
+  );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  viewMore: {
+    width: "100%",
+    height: 50,
+  },
+});
 
 export default VerticleCard;

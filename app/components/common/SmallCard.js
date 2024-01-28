@@ -1,16 +1,34 @@
-import { Text, View, StyleSheet, Image, Dimensions } from "react-native";
-import React from "react";
-import BlockCard from "../cards/BlockCard";
-import ViewMore from "../cards/ViewMore";
-const { width } = Dimensions.get("window");
-const SmallCard = ({item}) => {
-  if (item.type==='viewMore') {
-    return <ViewMore style={styles.viewMore}/>
+import React from 'react';
+import { View, StyleSheet, Dimensions } from 'react-native';
+import BlockCard from '../cards/BlockCard';
+import ViewMore from '../cards/ViewMore';
+import newsApi from '../../api/newApi';
+import { useNavigation } from '@react-navigation/native';
+
+const { width } = Dimensions.get('window');
+
+const SmallCard = ({ item, onPress }) => {
+  const navigation = useNavigation();
+  const handleViewMore = async category => {
+    const result = await newsApi.getByCategory(category);
+    navigation.navigate('NewsList', result);
+  };
+  if (item.type === 'viewMore') {
+    return (
+      <ViewMore
+        style={styles.viewMore}
+        onPress={() => handleViewMore(item.category)}
+      />
+    );
   }
+
   return (
-    <View style={styles.container}>
-      <BlockCard item={item} imageStyle={styles.image} />
-    </View>
+    <BlockCard
+      onPress={onPress}
+      item={item}
+      style={styles.container}
+      imageStyle={styles.image}
+    />
   );
 };
 
@@ -23,10 +41,10 @@ const styles = StyleSheet.create({
   image: {
     height: 100,
   },
-  viewMore:{
-    width:width/2,
-    height:200,
-  }
+  viewMore: {
+    width: width / 2,
+    height: 200,
+  },
 });
 
 export default SmallCard;
