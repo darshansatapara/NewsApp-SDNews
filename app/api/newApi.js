@@ -45,7 +45,7 @@ const searchPost = async (query) => {
   if (!query) return {};
   try {
     const response = await apiClient.post(`/news/search/${query}`);
-    return response;
+    return response.data;
   } catch (error) {
     console.log("Error while searching - searchPost newsAPi", error);
   }
